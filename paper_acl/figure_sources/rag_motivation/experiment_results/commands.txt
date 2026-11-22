@@ -1,0 +1,3 @@
+.venv/bin/python scripts/p14_read_ids.py --bench memeye --ids results/rag30_20261111/memeye_ids30.json --out results/rag30_20261111/memeye_rag30_strong.jsonl --reader strong --workers 8
+.venv/bin/python scripts/p14_read_ids.py --bench memlens --ids results/rag30_20261111/memlens_ids30.json --out results/rag30_20261111/memlens_rag30_strong.jsonl --reader strong --workers 8
+.venv/bin/python scripts/p14_read_ids.py --bench visualmem --ids results/rag30_20261111/visualmem_ids30.json --out results/rag30_20261111/visualmem_rag30_strong.jsonl --reader strong --workers 8

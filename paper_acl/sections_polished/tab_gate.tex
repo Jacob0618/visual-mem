@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{X|cccc|cccc}
+\toprule
+\rowcolor{hHead} & \multicolumn{4}{c|}{\textbf{Lightweight reader}} & \multicolumn{4}{c}{\textbf{Strong reader}} \\
+\rowcolor{hHead} \textbf{Policy} & MemEye & MemLens & VisualMem & CamRoll & MemEye & MemLens & VisualMem & CamRoll \\
+\midrule
+Standard path for every history & 0.543 & 0.453 & 0.569 & 0.827 & 0.793 & 0.584 & 0.925 & 0.899 \\
+Widened path for every history & 0.476 & 0.513 & 0.579 & 0.815 & 0.819 & 0.693 & 0.921 & 0.907 \\
+\oursrow \vgs{}: history visibility $H(h)\ge0.45$ & 0.543 & 0.513 & 0.579 & 0.827 & 0.793 & 0.693 & 0.921 & 0.899 \\
+\midrule
+Per-question estimate $\hat v(q)\ge0.7$ & 0.549 & 0.509 & 0.580 & 0.827 & 0.799 & 0.691 & 0.920 & 0.899 \\
+Per-question message length & 0.524 & 0.506 & 0.578 & 0.827 & 0.787 & 0.695 & 0.921 & 0.899 \\
+Per-question random routing & 0.536 & 0.505 & 0.576 & 0.827 & 0.796 & 0.679 & 0.922 & 0.899 \\
+Per-question oracle & 0.628 & 0.579 & 0.638 & 0.861 & 0.856 & 0.742 & 0.944 & 0.927 \\
+AUC of $\hat v(q)$ & 0.49 & 0.50 & 0.51 & 0.50 & 0.58 & 0.63 & 0.47 & 0.50 \\
+\bottomrule
+\end{tabularx}
+\caption{\textbf{Routing policies.} Accuracy when every history takes one path, with the history-level gate of \vgs{}, and with per-question routers. Random routing uses the path shares of the per-question estimate; the oracle takes the better path for each question; AUC measures how well $\hat v(q)$ ranks the questions that gain from widening.}
+\label{tab:gate}
+\end{table*}

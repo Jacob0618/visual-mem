@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lccc|c}
+\toprule
+\rowcolor{hHead} \textbf{Selector} & FSR & Rounds & Cosine & Accuracy \\
+\midrule
+\oursrow gemini-3.8-flash & .860 & 7.2 & .523 & .543 \\
+GPT-5-mini & .854 & 10.1 & .615 & .505 \\
+DeepSeek-V3.1 & .838 & 17.6 & .739 & .474 \\
+gemini-2.5-flash & .712 & 6.2 & .453 & .478 \\
+gemini-2.5-flash-lite & .690 & 10.2 & .588 & .480 \\
+Qwen3-235B (thinking) & .658 & 5.1 & .445 & .509 \\
+Qwen3-235B & .598 & 4.8 & .404 & .477 \\
+GPT-4.1-mini & .536 & 4.2 & .391 & .463 \\
+\midrule
+RAG@40 & .914 & 40 & -- & .493 \\
+\bottomrule
+\end{tabular}}
+\caption{\textbf{Selector models} under the same instruction and compact index on MemEye. FSR and opened rounds of the selection; \emph{Cosine} is the full-set recall of cosine retrieval with as many rounds as each selection; \emph{Accuracy} is the lightweight reader's on the standard path. $^{\ddagger}$A fixed random subset of 150 questions.}
+\label{tab:selectors}
+\end{table}

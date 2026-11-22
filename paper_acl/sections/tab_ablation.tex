@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.2pt}
+\renewcommand{\arraystretch}{1.06}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Configuration} & \cellcolor{hME}\textbf{MemEye} & \cellcolor{hML}\textbf{MemLens} & \cellcolor{hVM}\textbf{VisualMem} \\
+\midrule
+\oursrow \vgs{} (full) & .519 & .536 & .601 \\
+\quad w/o widened path & .518\,{\fontsize{6.4}{7}\selectfont$-0.1$} & \cellcolor{dC}.483\,{\fontsize{6.4}{7}\selectfont$-5.3$} & \cellcolor{dA}.575\,{\fontsize{6.4}{7}\selectfont$-2.6$} \\
+\quad w/o whole index & .525\,{\fontsize{6.4}{7}\selectfont$+0.6$} & .536\,{\fontsize{6.4}{7}\selectfont$0.0$} & \cellcolor{dC}.527\,{\fontsize{6.4}{7}\selectfont$-7.4$} \\
+\quad w/o standard path & \cellcolor{dA}.506\,{\fontsize{6.4}{7}\selectfont$-1.3$} & .536\,{\fontsize{6.4}{7}\selectfont$0.0$} & .592\,{\fontsize{6.4}{7}\selectfont$-0.9$} \\
+\midrule
+\oursrow Set selection (\qss{}) & .524 & .483 & .519 \\
+\quad w/o index reading & \cellcolor{dC}.474\,{\fontsize{6.4}{7}\selectfont$-5.0$} & \cellcolor{dC}.416\,{\fontsize{6.4}{7}\selectfont$-6.7$} & \cellcolor{dD}.378\,{\fontsize{6.4}{7}\selectfont$-14.1$} \\
+\quad w/o adaptive size & \cellcolor{dB}.494\,{\fontsize{6.4}{7}\selectfont$-3.0$} & \cellcolor{dA}.455\,{\fontsize{6.4}{7}\selectfont$-2.8$} & .537\,{\fontsize{6.4}{7}\selectfont$+1.8$} \\
+\quad w/o set output & .523\,{\fontsize{6.4}{7}\selectfont$-0.1$} & \cellcolor{dA}.472\,{\fontsize{6.4}{7}\selectfont$-1.1$} & .524\,{\fontsize{6.4}{7}\selectfont$+0.5$} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Ablations with the lightweight reader.} Accuracy and change in points from the highlighted row above; shading marks drops of 1--3, 3--5, 5--8, and over 8 points. \emph{w/o widened} or \emph{standard path}: one path for every question; \emph{w/o whole index}: both paths read a 100-round cosine pool; \emph{w/o index reading}: cosine top-$k$ at the size that \qss{} chose; \emph{w/o adaptive size}: the selector's ranking of the index cut at 8 rounds; \emph{w/o set output}: the same ranking cut at the size that \qss{} chose. The second block uses the 100-round pool (on MemLens, whole histories of at most 83 rounds). MemEye and VisualMem come from a run with regenerated image descriptions; full-set recall is in Table~\ref{tab:ablation_full}.}
+\label{tab:ablation}
+\end{table}

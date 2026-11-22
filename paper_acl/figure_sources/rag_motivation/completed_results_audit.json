@@ -1,0 +1,121 @@
+{
+  "date": "2026-11-11",
+  "api_calls": 0,
+  "benchmarks": {
+    "memeye": {
+      "status": "pass",
+      "output_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memeye_rag30_strong.jsonl",
+      "output_sha256": "7243164d9692fc7f463e70ec544c0858555e473a018d3fb5e8681c03c67b5558",
+      "n_rows": 371,
+      "n_unique_qids": 371,
+      "expected_n": 371,
+      "qid_sets_equal_ids_and_full": true,
+      "errors": 0,
+      "error_qids": [],
+      "empty_predictions": 0,
+      "empty_prediction_qids": [],
+      "retrieved_prefix_mismatch_count": 0,
+      "retrieved_prefix_mismatch_qids": [],
+      "retrieved_count_not_30_count": 0,
+      "all_retrieved_equal_verified_v1_prefix30": true,
+      "all_n_loaded_30": true,
+      "score": 0.7641509433962265,
+      "accuracy_percent": 76.41509433962264,
+      "full_context_score": 0.8194070080862533,
+      "full_context_percent": 81.94070080862534,
+      "full_minus_rag_percentage_points": 5.525606469002695,
+      "rag_minus_full_percentage_points": -5.525606469002695,
+      "paired_n": 371,
+      "source_full_audit": "/Users/qixuansun/Documents/Codex/2026-11-09/bn/work/rag30_experiment/visual_full_audit.json",
+      "score_values": [
+        0.0,
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ]
+    },
+    "memlens": {
+      "status": "pass",
+      "output_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memlens_rag30_strong.jsonl",
+      "output_sha256": "13c4f08108323e3d17d046603a4d8b014c28eae456ae3675f639277a50adc089",
+      "n_rows": 150,
+      "n_unique_qids": 150,
+      "expected_n": 150,
+      "qid_sets_equal_ids_and_full": true,
+      "errors": 0,
+      "error_qids": [],
+      "empty_predictions": 0,
+      "empty_prediction_qids": [],
+      "retrieved_prefix_mismatch_count": 0,
+      "retrieved_prefix_mismatch_qids": [],
+      "retrieved_count_not_30_count": 0,
+      "all_retrieved_equal_verified_v1_prefix30": true,
+      "all_n_loaded_30": true,
+      "score": 0.6533333333333333,
+      "accuracy_percent": 65.33333333333333,
+      "full_context_score": 0.74,
+      "full_context_percent": 74.0,
+      "full_minus_rag_percentage_points": 8.666666666666668,
+      "rag_minus_full_percentage_points": -8.666666666666668,
+      "paired_n": 150,
+      "source_full_audit": "/Users/qixuansun/Documents/Codex/2026-11-09/bn/work/rag30_experiment/visual_full_audit.json",
+      "score_values": [
+        0.0,
+        1.0
+      ]
+    },
+    "visualmem": {
+      "status": "pass",
+      "output_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/visualmem_rag30_strong.jsonl",
+      "output_sha256": "3bfe1ebe58b7969f204c6d5d4e4e352a00c5afdbb1c6aa8fc073a09566bae67a",
+      "n_rows": 696,
+      "n_unique_qids": 696,
+      "expected_n": 696,
+      "qid_sets_equal_ids_and_full": true,
+      "errors": 0,
+      "error_qids": [],
+      "empty_predictions": 0,
+      "empty_prediction_qids": [],
+      "retrieved_prefix_mismatch_count": 0,
+      "retrieved_prefix_mismatch_qids": [],
+      "retrieved_count_not_30_count": 0,
+      "all_retrieved_equal_verified_v1_prefix30": true,
+      "all_n_loaded_30": true,
+      "score": 0.7931034482758621,
+      "accuracy_percent": 79.3103448275862,
+      "full_context_score": 0.9669540229885057,
+      "full_context_percent": 96.69540229885058,
+      "full_minus_rag_percentage_points": 17.385057471264368,
+      "rag_minus_full_percentage_points": -17.385057471264368,
+      "paired_n": 696,
+      "source_full_audit": "/Users/qixuansun/Documents/Codex/2026-11-09/bn/work/rag30_experiment/visual_full_audit.json",
+      "score_values": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "status": "pass",
+  "visualmem_status": "complete and inspected",
+  "figure_data_audit": {
+    "status": "pass",
+    "visual_rows": [
+      "MemEye",
+      "MemLens-32k",
+      "VisualMem"
+    ],
+    "checks": [
+      "CSV/provenance scores, n and k agree with independently audited original outputs",
+      "Full-context values and percentage-point differences match paired audit",
+      "All 1217 visual paired-score CSV records match raw RAG30 and archived full scores",
+      "Rendered bars 76.4,65.3,79.3 and delta labels +5.5,+8.7,+17.4 are correctly rounded"
+    ],
+    "files_sha256": {
+      "rag_accuracy.csv": "30856cf963b8aa9372ecd96488af6b909d525f8a8acdfcaf9cafd694c4b8ca60",
+      "data_provenance.json": "80f72bc9dc44b457917a6e0806205daa5a1601f230f6621e148f81bfe99803f6",
+      "paired_scores.csv": "8660ab157093754de601a8ece51ea01f6c99f72a8d0c5936511d1cf06383ce93",
+      "rag_motivation.png": "3a1a3a1ca88698f6fea096544eb5728286d09b0a4b7be9aac133a2cc336592e1"
+    }
+  }
+}

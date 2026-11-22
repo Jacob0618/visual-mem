@@ -1,0 +1,16 @@
+# secrets and local environments
+.env
+.env.*
+.venv*/
+# large local data, caches, third-party code and binaries
+cache/
+data/
+baselines/
+tools/
+omni_memory_data/
+# results: only small summary files are tracked (added explicitly with `git add -f`)
+results/
+# misc
+.DS_Store
+__pycache__/
+*.pyc

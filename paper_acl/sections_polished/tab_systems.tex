@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.4pt}
+\begin{tabularx}{\linewidth}{>{\raggedright\arraybackslash}p{2.6cm}|>{\raggedright\arraybackslash}p{3.8cm}|>{\raggedright\arraybackslash}p{3.0cm}|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}X}
+\toprule
+\rowcolor{hHead} \textbf{System} & \textbf{Memory written at ingestion} & \textbf{Retrieval (budget)} & \textbf{Other models} & \textbf{Adaptation} \\
+\midrule
+SimpleMem (0.3.0) & factual statements from windows of 40 turns, with resolved references and times & planning, reflection, hybrid search & -- & punctuation removed from keyword queries \\
+Omni-SimpleMem (0.3.0) & multimodal atomic units, knowledge graph; images as on-demand units & hybrid search, graph expansion (20 units) & unit summaries (2.5-flash-lite) & no modality filter for questions about images \\
+TeleMem (1.10.1) & one memory per message, for the user profile and for events & top 30 per scope & extraction (2.5-flash-lite) & English extraction prompts \\
+V-Mem & raw user, assistant, and image units of every round & modality routing (20 rounds and neighbours) & anchors (2.5-flash-lite) & -- \\
+MMA & raw turns with a confidence score & similarity $\times$ confidence (80 turns) & -- & -- \\
+\bottomrule
+\end{tabularx}
+\caption{\textbf{External memory systems.} ``Other models'' lists roles that do not use \texttt{gemini-3.8-flash}; ``Adaptation'' lists the changes needed to run each release on our data.}
+\label{tab:systems}
+\end{table*}

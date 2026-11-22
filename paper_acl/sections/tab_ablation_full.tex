@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{l|cc|cc|cc}
+\toprule
+\multirow{2}{*}{\textbf{Reading}} & \multicolumn{2}{c|}{\cellcolor{hME}\textbf{MemEye}} & \multicolumn{2}{c|}{\cellcolor{hML}\textbf{MemLens}} & \multicolumn{2}{c}{\cellcolor{hVM}\textbf{VisualMem}} \\
+ & \cellcolor{hME}FSR & \cellcolor{hME}Acc. & \cellcolor{hML}FSR & \cellcolor{hML}Acc. & \cellcolor{hVM}FSR & \cellcolor{hVM}Acc. \\
+\midrule
+Cosine top-40 (RAG@40) & .914 & .502 & .659 & .466 & .454 & .450 \\
+Cosine top-$k$, $k$ = size of the \qss{} set & .527 & .474 & .163 & .416 & .260 & .378 \\
+Model ranking, top 8 & .819 & .494 & .466 & .455 & .559 & .537 \\
+Model ranking, top $k$, $k$ = size of the \qss{} set & .878 & .523 & .356 & .472 & .555 & .524 \\
+\midrule
+\qss{}, 100-round pool & .916 & \textbf{.524} & .371 & .483 & .555 & .519 \\
+\qss{}, whole index (standard path) & .889 & .518 & .371 & .483 & .793 & .575 \\
+Widened path for every question & .887 & .506 & .283 & \textbf{.536} & .766 & .592 \\
+\oursrow \vgs{} (visibility gate) & -- & .519 & -- & \textbf{.536} & -- & \textbf{.601} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Full ablation with the lightweight reader:} full-set recall (FSR) of the rounds handed to the reader, and accuracy. The model ranking uses the selector and the \qss{} instruction over the same 100-round pool as \qss{} and is cut at 8 rounds or at the size that \qss{} chose. MemLens histories have at most 83 rounds, so the pool is the whole history there. MemEye and VisualMem come from an independent run with regenerated image descriptions.}
+\label{tab:ablation_full}
+\end{table*}

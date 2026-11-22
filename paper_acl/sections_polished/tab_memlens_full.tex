@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{2.5pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabularx}{\linewidth}{llYYc}
+\toprule
+\rowcolor{hHead} Reader & History & RAG@40 & \vgs{} & $\Delta$ (points) \\
+\midrule
+\multirow{2}{*}{Light} & 32k & .470 & \textbf{.513} & $+4.3$ \\
+ & 64k & .468 & \textbf{.526} & $+5.8$$^{*}$ \\
+\midrule
+\multirow{2}{*}{Strong} & 32k & .682 & \textbf{.693} & $+1.1$ \\
+ & 64k & .655 & \textbf{.674} & $+1.9$ \\
+\bottomrule
+\end{tabularx}
+\caption{\textbf{MemLens with longer histories (466 test questions).} Accuracy and paired gains over RAG@40 in points; $^{*}$ marks $p<0.05$ in a paired permutation test. Both history lengths use the same questions.}
+\label{tab:memlens_full}
+\end{table}

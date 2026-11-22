@@ -1,0 +1,26 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3.4pt}
+\renewcommand{\arraystretch}{1.06}
+\begin{tabular}{l|cc|cc|cc|cc}
+\toprule
+\multirow{2}{*}{\textbf{Method}} & \multicolumn{2}{c|}{\cellcolor{hME}\textbf{MemEye}} & \multicolumn{2}{c|}{\cellcolor{hML}\textbf{MemLens-32k}} & \multicolumn{2}{c|}{\cellcolor{hVM}\textbf{VisualMem}} & \multicolumn{2}{c}{\cellcolor{hCR}\textbf{CamRoll}} \\
+ & \cellcolor{hME}Light & \cellcolor{hME}Strong & \cellcolor{hML}Light & \cellcolor{hML}Strong & \cellcolor{hVM}Light & \cellcolor{hVM}Strong & \cellcolor{hCR}Light & \cellcolor{hCR}Strong \\
+\midrule
+RAG@40 & .493 & .764 & .470 & .682 & .450 & .826 & .724 & .894 \\
+Full context & .500 & \textbf{.810} & .446 & .691 & .454 & \textbf{.967} & -- & -- \\
+\midrule
+SimpleMem & .355 & .445 & .395 & .403 & .414 & .747 & .673 & .819 \\
+Omni-SimpleMem & .311 & .373 & .384 & .421 & .425 & .746 & .614 & .718 \\
+TeleMem & .339 & .398 & .200 & .159 & .368 & .703 & .639 & .744 \\
+\midrule
+V-Mem & .469 & .730 & .461 & .665 & .427 & .809 & .691 & .828 \\
+MMA & .414 & .761 & .442 & .629 & .407 & .868 & .600 & .854 \\
+\midrule
+\oursrow \textbf{\vgs{} (ours)} & \textbf{.543}\,{\fontsize{6.2}{7}\selectfont$_{+10.1\%}$} & .793\,{\fontsize{6.2}{7}\selectfont$_{+3.8\%}$} & \textbf{.513}\,{\fontsize{6.2}{7}\selectfont$_{+9.1\%}$} & \textbf{.693}\,{\fontsize{6.2}{7}\selectfont$_{+1.6\%}$} & \textbf{.579}\,{\fontsize{6.2}{7}\selectfont$_{+28.8\%}$} & .921\,{\fontsize{6.2}{7}\selectfont$_{+11.5\%}$} & \textbf{.827}\,{\fontsize{6.2}{7}\selectfont$_{+14.2\%}$} & \textbf{.899}\,{\fontsize{6.2}{7}\selectfont$_{+0.6\%}$} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Main results.} Accuracy with the lightweight (Light) and the strong reader. Every method is evaluated on the same questions (371, 466, 696, and 1000) with the same readers, prompts, and judges. Subscripts give the relative change of \vgs{} over RAG@40; the best result per column is in bold. Costs are in Table~\ref{tab:cost}, and retrieval re-ranked by the selector model is compared in Table~\ref{tab:rerank}. Full context is not run on CamRoll, where a history holds about 800 photos.}
+\label{tab:main}
+\end{table*}

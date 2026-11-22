@@ -1,0 +1,27 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4.6pt}
+\renewcommand{\arraystretch}{1.06}
+\begin{tabular}{l|ccc|ccc|ccc}
+\toprule
+\multirow{2}{*}{\textbf{Method}} & \multicolumn{3}{c|}{\cellcolor{hME}\textbf{MemEye}} & \multicolumn{3}{c|}{\cellcolor{hML}\textbf{MemLens-32k (150)}} & \multicolumn{3}{c}{\cellcolor{hVM}\textbf{VisualMem}} \\
+ & \cellcolor{hME}Light & \cellcolor{hME}Strong & \cellcolor{hME}\$/1k & \cellcolor{hML}Light & \cellcolor{hML}Strong & \cellcolor{hML}\$/1k & \cellcolor{hVM}Light & \cellcolor{hVM}Strong & \cellcolor{hVM}\$/1k \\
+\midrule
+RAG@40 & .488 & .749 & 0.9\,/\,9.8 & .547 & .760 & 1.7\,/\,14.9 & .454 & .812 & 1.0\,/\,8.8 \\
+Full context & .495 & \textbf{.819} & 0.4\,/\,9.0 & .520 & .740 & 3.1\,/\,24.7 & .454 & \textbf{.967} & 3.2\,/\,154 \\
+\midrule
+SimpleMem & .355 & .482 & 13.2\,/\,16.1 & .400 & .447 & 47.2\,/\,49.3 & .430 & .774 & 22.4\,/\,27.6 \\
+Omni-SimpleMem & .295 & .338 & 2.1\,/\,4.0 & .427 & .487 & 49.8\,/\,51.9 & .448 & .711 & 6.2\,/\,8.9 \\
+MIRIX & .245$^{\dagger}$ & .309$^{\dagger}$ & 17.7\,/\,20.4 & .229$^{\dagger}$ & .200$^{\dagger}$ & 3171\,/\,3175 & .372 & .703 & 91.2\,/\,96.3 \\
+TeleMem & .334 & .404 & 0.8\,/\,2.2 & .280 & .180 & 30.4\,/\,31.6 & .382 & .681 & 4.3\,/\,6.3 \\
+\midrule
+V-Mem & .474 & .670 & 0.7\,/\,7.2 & .507 & .647 & 1.3\,/\,11.7 & .422 & .776 & 0.7\,/\,7.4 \\
+MMA & .394 & .600 & 0.3\,/\,4.2 & .473 & .560 & 0.4\,/\,4.7 & .409 & .701 & 0.4\,/\,5.1 \\
+\midrule
+\oursrow \textbf{\vgs{} (ours)} & \textbf{.541} & .797 & 6.8\,/\,6.2 & \textbf{.587} & \textbf{.767} & 8.5\,/\,14.3 & \textbf{.569} & .843 & 13.7\,/\,16.8 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Main results on identical question sets.} Accuracy with the lightweight (Light) and the strong reader, and cost per 1,000 questions in USD (lightweight\,/\,strong), including memory construction and, for \vgs{}, the creation and storage of caches. Methods are grouped into raw retrieval and full-context reading, memory systems that write text at ingestion, memory systems that keep raw turns, and ours; all share the same readers, prompts, and judges. MemLens uses a stratified subset of 150 test questions (full test split in Table~\ref{tab:fulltest}); paired intervals are in Figure~\ref{fig:app_baselines}. Best accuracy per column in bold. $^{\dagger}$On the 269 MemEye and 140 MemLens questions whose histories MIRIX finished building.}
+\label{tab:main}
+\end{table*}

@@ -1,0 +1,47 @@
+{
+  "completed_at": 1794413338.355093,
+  "n_total": 1217,
+  "errors": 0,
+  "evaluation_code_unchanged": true,
+  "full_rerun": false,
+  "results": [
+    {
+      "benchmark": "memeye",
+      "n": 371,
+      "errors": 0,
+      "empty_predictions": 0,
+      "retrieval_budget": 30,
+      "score": 0.7641509433962265,
+      "full_context_score": 0.8194070080862533,
+      "full_minus_rag_points": 5.525606469002686,
+      "answering_usd": 3.0594891
+    },
+    {
+      "benchmark": "memlens",
+      "n": 150,
+      "errors": 0,
+      "empty_predictions": 0,
+      "retrieval_budget": 30,
+      "score": 0.6533333333333333,
+      "full_context_score": 0.74,
+      "full_minus_rag_points": 8.666666666666668,
+      "answering_usd": 1.64880075
+    },
+    {
+      "benchmark": "visualmem",
+      "n": 696,
+      "errors": 0,
+      "empty_predictions": 0,
+      "retrieval_budget": 30,
+      "score": 0.7931034482758621,
+      "full_context_score": 0.9669540229885057,
+      "full_minus_rag_points": 17.385057471264364,
+      "answering_usd": 4.8975021
+    }
+  ],
+  "new_call_cost": {
+    "gemini_estimated_usd": 9.2124,
+    "openrouter_reported_usd": 0.02223222,
+    "calls": 1386
+  }
+}

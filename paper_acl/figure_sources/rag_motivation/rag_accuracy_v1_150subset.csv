@@ -1,0 +1,6 @@
+benchmark,modality,n,answering_model,retrieval_budget,retrieval_unit,rag_accuracy,full_context_accuracy,full_context_minus_rag_points,metric
+LoCoMo,Text,1540,gemini-3.8-flash,100,turns,0.9123376623376623,0.9175324675324675,0.5194805194805197,Historical custom lenient binary judge (e8); U2 answering prompt
+LongMemEval-S,Text,500,gemini-3.8-flash,30,rounds,0.904,0.908,0.40000000000000036,Official LongMemEval categorical judge; full 500-question set
+MemEye,Multimodal,371,gemini-3.8-flash,30,rounds,0.7641509433962265,0.8194070080862533,5.525606469002686,Official MemEye fractional score
+MemLens-32k,Multimodal,150,gemini-3.8-flash,30,rounds,0.6533333333333333,0.74,8.666666666666668,Official MemLens judge; shared 150-question test subset
+VisualMem,Multimodal,696,gemini-3.8-flash,30,rounds,0.7931034482758621,0.9669540229885057,17.385057471264364,Exact option-letter accuracy

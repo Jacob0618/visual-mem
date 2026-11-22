@@ -1,0 +1,284 @@
+\begin{thebibliography}{38}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Bao et~al.(2026)Bao, Zhang, Zhang, Lou, Wen, and Luo}]{bao2026rawrag}
+Zhengye Bao, Shengtao Zhang, Haokai Zhang, Shiqi Lou, Muning Wen, and Minnan
+  Luo. 2026.
+\newblock Is complex agentic memory always needed? {Naive} {RAG} is stronger
+  than we thought.
+\newblock \emph{arXiv preprint arXiv:2610.30755}.
+
+\bibitem[{Bei et~al.(2026)Bei, Wei, Ning, Zhao, Liu, Lin, Zhu, Hamann, He, and
+  Tong}]{bei2026memgallery}
+Yuanchen Bei, Tianxin Wei, Xuying Ning, Yanjun Zhao, Zhining Liu, Xiao Lin,
+  Yada Zhu, Hendrik Hamann, Jingrui He, and Hanghang Tong. 2026.
+\newblock {Mem-Gallery}: Benchmarking multimodal long-term conversational
+  memory for {MLLM} agents.
+\newblock \emph{arXiv preprint arXiv:2601.03515}.
+
+\bibitem[{Chai et~al.(2026)Chai, Wang, Yang, Peng, Song, Fu, Liu, Lin, Wang,
+  and Zhang}]{chai2026smmbench}
+Huacan Chai, Yukai Wang, Yingxuan Yang, Dan Peng, Yuanyi Song, Zhihui Fu,
+  Weiwen Liu, Jianghao Lin, Jun Wang, and Weinan Zhang. 2026.
+\newblock {SMMBench}: A benchmark for source-distributed multimodal agent
+  memory.
+\newblock \emph{arXiv preprint arXiv:2605.15710}.
+
+\bibitem[{Chen et~al.(2026)Chen, Guan, Lin, Li, Lin, Wang, Chen, Luo, Sun,
+  Zhang, and Li}]{chen2026telemem}
+Chunliang Chen, Ming Guan, Xiao Lin, Jiaxu Li, Luxi Lin, Qiyi Wang, Xiangyu
+  Chen, Jixiang Luo, Changzhi Sun, Dell Zhang, and Xuelong Li. 2026.
+\newblock {TeleMem}: Building long-term and multimodal memory for agentic {AI}.
+\newblock \emph{arXiv preprint arXiv:2601.06037}.
+
+\bibitem[{Chen et~al.(2023)Chen, Pasunuru, Weston, and
+  Celikyilmaz}]{chen2023memwalker}
+Howard Chen, Ramakanth Pasunuru, Jason Weston, and Asli Celikyilmaz. 2023.
+\newblock Walking down the memory maze: Beyond context limit through
+  interactive reading.
+\newblock \emph{arXiv preprint arXiv:2310.05029}.
+
+\bibitem[{Chhikara et~al.(2025)Chhikara, Khant, Aryan, Singh, and
+  Yadav}]{chhikara2025mem0}
+Prateek Chhikara, Dev Khant, Saket Aryan, Taranjeet Singh, and Deshraj Yadav.
+  2025.
+\newblock {Mem0}: Building production-ready {AI} agents with scalable long-term
+  memory.
+\newblock \emph{arXiv preprint arXiv:2504.19413}.
+
+\bibitem[{Cormack and Grossman(2015)}]{cormack2015autonomy}
+Gordon~V. Cormack and Maura~R. Grossman. 2015.
+\newblock Autonomy and reliability of continuous active learning for
+  technology-assisted review.
+\newblock \emph{arXiv preprint arXiv:1504.06868}.
+
+\bibitem[{Gim et~al.(2023)Gim, Chen, Lee, Sarda, Khandelwal, and
+  Zhong}]{gim2023promptcache}
+In~Gim, Guojun Chen, Seung-seob Lee, Nikhil Sarda, Anurag Khandelwal, and Lin
+  Zhong. 2023.
+\newblock Prompt cache: Modular attention reuse for low-latency inference.
+\newblock \emph{arXiv preprint arXiv:2311.04934}.
+
+\bibitem[{Guo et~al.(2026{\natexlab{a}})Guo, Jiao, Liu, Pang
+  et~al.}]{guo2026seeingsurvey}
+Minghao Guo, Qingyue Jiao, Xiujin Liu, Jianhong Pang, et~al.
+  2026{\natexlab{a}}.
+\newblock Seeing, maintaining, and learning: The evolution of multimodal agent
+  memory.
+\newblock \emph{arXiv preprint arXiv:2610.19366}.
+
+\bibitem[{Guo et~al.(2026{\natexlab{b}})Guo, Jiao, Shi, Quan, Zhang, Li, Che,
+  Xu, Liu, Liu, Kapadia, Pavlovic, Liu, Wang, Shi, Metaxas, and
+  Tang}]{guo2026memeye}
+Minghao Guo, Qingyue Jiao, Zeru Shi, Yihao Quan, Boxuan Zhang, Danrui Li, Liwei
+  Che, Wujiang Xu, Shilong Liu, Zirui Liu, Mubbasir Kapadia, Vladimir Pavlovic,
+  Jiang Liu, Mengdi Wang, Yiyu Shi, Dimitris~N. Metaxas, and Ruixiang Tang.
+  2026{\natexlab{b}}.
+\newblock {MemEye}: {A} visual-centric evaluation framework for multimodal
+  agent memory.
+\newblock \emph{arXiv preprint arXiv:2605.15128}.
+
+\bibitem[{Guti{\'e}rrez et~al.(2024)Guti{\'e}rrez, Shu, Gu, Yasunaga, and
+  Su}]{gutierrez2024hipporag}
+Bernal~Jim{\'e}nez Guti{\'e}rrez, Yiheng Shu, Yu~Gu, Michihiro Yasunaga, and
+  Yu~Su. 2024.
+\newblock {HippoRAG}: Neurobiologically inspired long-term memory for large
+  language models.
+\newblock \emph{arXiv preprint arXiv:2405.14831}.
+
+\bibitem[{Jiang et~al.(2025)Jiang, Zhang, Garg, Arora, Kuo, Xu, Bansal,
+  Brossman, Liu, Colak, Aly, Kumar, and Dong}]{jiang2025memoryqa}
+Hongda Jiang, Xinyuan Zhang, Siddhant Garg, Rishab Arora, Shiun-Zu Kuo, Jiayang
+  Xu, Ankur Bansal, Christopher Brossman, Yue Liu, Aaron Colak, Ahmed Aly, Anuj
+  Kumar, and Xin~Luna Dong. 2025.
+\newblock {Memory-QA}: Answering recall questions based on multimodal memories.
+\newblock In \emph{Proceedings of the 2025 Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Jiang et~al.(2023)Jiang, Wu, Lin, Yang, and Qiu}]{jiang2023llmlingua}
+Huiqiang Jiang, Qianhui Wu, Chin-Yew Lin, Yuqing Yang, and Lili Qiu. 2023.
+\newblock {LLMLingua}: Compressing prompts for accelerated inference of large
+  language models.
+\newblock \emph{arXiv preprint arXiv:2310.05736}.
+
+\bibitem[{Jiang et~al.(2026)Jiang, Liao, Yin, Liu, Cuomo, and
+  Bacci}]{jiang2026delivery}
+Yuhang Jiang, Qingwei Liao, Kaize Yin, Xingling Liu, Luca Cuomo, and Silvio
+  Bacci. 2026.
+\newblock Retrieved but not delivered: Multimodal memory delivery for long-term
+  agents.
+\newblock \emph{arXiv preprint arXiv:2609.32590}.
+
+\bibitem[{Kang et~al.(2026)Kang, Jiang, Li, Li, and Li}]{kang2026vmem}
+Dingyi Kang, Dongming Jiang, Yi~Li, Guanpeng Li, and Bingzhe Li. 2026.
+\newblock {V-Mem}: Modality-routed retrieval for long-term multimodal agentic
+  memory.
+\newblock \emph{arXiv preprint arXiv:2608.01543}.
+
+\bibitem[{Lee et~al.(2024)Lee, Chen, Furuta, Canny, and
+  Fischer}]{lee2024readagent}
+Kuang-Huei Lee, Xinyun Chen, Hiroki Furuta, John Canny, and Ian Fischer. 2024.
+\newblock A human-inspired reading agent with gist memory of very long
+  contexts.
+\newblock \emph{arXiv preprint arXiv:2402.09727}.
+
+\bibitem[{Liu et~al.(2026{\natexlab{a}})Liu, Yang, Pu, Liu, Long, Guo, Chen,
+  Weng, Kochkina, Kaur, Smiley, Liu, Zou, Liu, Bu, Peng, and
+  Wang}]{liu2026worldmemarena}
+Chengzhi Liu, Yuzhe Yang, Sophia~Xiao Pu, Yepeng Liu, Lin Long, Yichen Guo, Nuo
+  Chen, Zhaotian Weng, Elena Kochkina, Simerjot Kaur, Charese Smiley, Xiaomo
+  Liu, James Zou, Sheng Liu, Yuheng Bu, Songyou Peng, and Xin~Eric Wang.
+  2026{\natexlab{a}}.
+\newblock {WorldMemArena}: Evaluating multimodal agent memory through
+  action-world interaction.
+\newblock \emph{arXiv preprint arXiv:2605.29341}.
+
+\bibitem[{Liu et~al.(2026{\natexlab{b}})Liu, Ling, Qiu, Liu, Han, Xia, Tu,
+  Zheng, Xie, Fleming, Ding, and Yao}]{liu2026omnisimplemem}
+Jiaqi Liu, Zipeng Ling, Shi Qiu, Yanqing Liu, Siwei Han, Peng Xia, Haoqin Tu,
+  Zeyu Zheng, Cihang Xie, Charles Fleming, Mingyu Ding, and Huaxiu Yao.
+  2026{\natexlab{b}}.
+\newblock {Omni-SimpleMem}: Autoresearch-guided discovery of lifelong
+  multimodal agent memory.
+\newblock \emph{arXiv preprint arXiv:2604.01007}.
+
+\bibitem[{Liu et~al.(2026{\natexlab{c}})Liu, Su, Xia, Han, Zheng, Xie, Ding,
+  and Yao}]{liu2026simplemem}
+Jiaqi Liu, Yaofeng Su, Peng Xia, Siwei Han, Zeyu Zheng, Cihang Xie, Mingyu
+  Ding, and Huaxiu Yao. 2026{\natexlab{c}}.
+\newblock {SimpleMem}: Efficient lifelong memory for {LLM} agents.
+\newblock \emph{arXiv preprint arXiv:2601.02553}.
+
+\bibitem[{Long et~al.(2025)Long, He, Ye, Pan, Lin, Li, Zhao, and
+  Li}]{long2025m3agent}
+Lin Long, Yichen He, Wentao Ye, Yiyuan Pan, Yuan Lin, Hang Li, Junbo Zhao, and
+  Wei Li. 2025.
+\newblock Seeing, listening, remembering, and reasoning: A multimodal agent
+  with long-term memory.
+\newblock \emph{arXiv preprint arXiv:2508.09736}.
+
+\bibitem[{Lu et~al.(2026)Lu, Cheng, Zhang, and Tang}]{lu2026mma}
+Yihao Lu, Wanru Cheng, Zeyu Zhang, and Hao Tang. 2026.
+\newblock {MMA}: Multimodal memory agent.
+\newblock \emph{arXiv preprint arXiv:2602.16493}.
+
+\bibitem[{Maharana et~al.(2024)Maharana, Lee, Tulyakov, Bansal, Barbieri, and
+  Fang}]{maharana2024locomo}
+Adyasha Maharana, Dong-Ho Lee, Sergey Tulyakov, Mohit Bansal, Francesco
+  Barbieri, and Yuwei Fang. 2024.
+\newblock Evaluating very long-term conversational memory of {LLM} agents.
+\newblock \emph{arXiv preprint arXiv:2402.17753}.
+
+\bibitem[{Nguyen et~al.(2026)Nguyen, Nguyen, Patel, and
+  Li}]{nguyen2026personalvisual}
+Viet Nguyen, Thao Nguyen, Vishal~M. Patel, and Yuheng Li. 2026.
+\newblock Personal visual memory from explicit and implicit evidence.
+\newblock \emph{arXiv preprint arXiv:2605.28806}.
+
+\bibitem[{Packer et~al.(2023)Packer, Wooders, Lin, Fang, Patil, Stoica, and
+  Gonzalez}]{packer2023memgpt}
+Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir~G. Patil, Ion
+  Stoica, and Joseph~E. Gonzalez. 2023.
+\newblock {MemGPT}: Towards {LLMs} as operating systems.
+\newblock \emph{arXiv preprint arXiv:2310.08560}.
+
+\bibitem[{Park et~al.(2023)Park, O'Brien, Cai, Morris, Liang, and
+  Bernstein}]{park2023generative}
+Joon~Sung Park, Joseph~C. O'Brien, Carrie~J. Cai, Meredith~Ringel Morris, Percy
+  Liang, and Michael~S. Bernstein. 2023.
+\newblock Generative agents: Interactive simulacra of human behavior.
+\newblock \emph{arXiv preprint arXiv:2304.03442}.
+
+\bibitem[{Peng(2026)}]{peng2026memorytax}
+Zedong Peng. 2026.
+\newblock {MemoryTax}: The bitter lesson of agent memory.
+\newblock \emph{arXiv preprint arXiv:2610.29823}.
+
+\bibitem[{Ren et~al.(2026)Ren, Wang, Du, Xie, Liu, Yang, Feng, Pan, Zheng, Xu,
+  Li, Song, Wong, and See}]{ren2026memlens}
+Xiyu Ren, Zhaowei Wang, Yiming Du, Zhongwei Xie, Chi Liu, Xinlin Yang, Haoyue
+  Feng, Wenjun Pan, Tianshi Zheng, Baixuan Xu, Zhengnan Li, Yangqiu Song, Ginny
+  Wong, and Simon See. 2026.
+\newblock {MemLens}: Benchmarking multimodal long-term memory in large
+  vision-language models.
+\newblock \emph{arXiv preprint arXiv:2605.14906}.
+
+\bibitem[{Sharma and Lall(2026)}]{sharma2026selection}
+Rishabh Sharma and Rishika Lall. 2026.
+\newblock When does selection replace extraction? {A} pre-registered test of
+  agent memory with a typed decision model.
+\newblock \emph{arXiv preprint arXiv:2609.34227}.
+
+\bibitem[{Sun et~al.(2023)Sun, Yan, Ma, Wang, Ren, Chen, Yin, and
+  Ren}]{sun2023rankgpt}
+Weiwei Sun, Lingyong Yan, Xinyu Ma, Shuaiqiang Wang, Pengjie Ren, Zhumin Chen,
+  Dawei Yin, and Zhaochun Ren. 2023.
+\newblock Is {ChatGPT} good at search? {Investigating} large language models as
+  re-ranking agents.
+\newblock In \emph{Proceedings of the 2023 Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Tang et~al.(2026)Tang, Shang, Xu, and Singh}]{tang2026dmvbench}
+Yujin Tang, Chenming Shang, Ruize Xu, and Nikhil Singh. 2026.
+\newblock {DMV-Bench}: Diagnosing long-horizon multimodal agents' visual memory
+  with incidental cue injection.
+\newblock \emph{arXiv preprint arXiv:2606.27499}.
+
+\bibitem[{Wang and Chen(2025)}]{wang2025mirix}
+Yu~Wang and Xi~Chen. 2025.
+\newblock {MIRIX}: Multi-agent memory system for {LLM}-based agents.
+\newblock \emph{arXiv preprint arXiv:2507.07957}.
+
+\bibitem[{Wu et~al.(2026)Wu, Ji, Kawatkar, Kwan, Gu, Peng, and
+  Chang}]{wu2026lmev2}
+Di~Wu, Zixiang Ji, Asmi Kawatkar, Bryan Kwan, Jia-Chen Gu, Nanyun Peng, and
+  Kai-Wei Chang. 2026.
+\newblock {LongMemEval-V2}: Evaluating long-term agent memory toward
+  experienced colleagues.
+\newblock \emph{arXiv preprint arXiv:2605.12493}.
+
+\bibitem[{Wu et~al.(2025)Wu, Wang, Yu, Zhang, Chang, and
+  Yu}]{wu2025longmemeval}
+Di~Wu, Hongwei Wang, Wenhao Yu, Yuwei Zhang, Kai-Wei Chang, and Dong Yu. 2025.
+\newblock {LongMemEval}: Benchmarking chat assistants on long-term interactive
+  memory.
+\newblock In \emph{International Conference on Learning Representations}.
+
+\bibitem[{Xu et~al.(2025)Xu, Liang, Mei, Gao, Tan, and Zhang}]{xu2025amem}
+Wujiang Xu, Zujie Liang, Kai Mei, Hang Gao, Juntao Tan, and Yongfeng Zhang.
+  2025.
+\newblock {A-MEM}: Agentic memory for {LLM} agents.
+\newblock In \emph{Advances in Neural Information Processing Systems}.
+
+\bibitem[{Yang et~al.(2018)Yang, Qi, Zhang, Bengio, Cohen, Salakhutdinov, and
+  Manning}]{yang2018hotpotqa}
+Zhilin Yang, Peng Qi, Saizheng Zhang, Yoshua Bengio, William~W. Cohen, Ruslan
+  Salakhutdinov, and Christopher~D. Manning. 2018.
+\newblock {HotpotQA}: {A} dataset for diverse, explainable multi-hop question
+  answering.
+\newblock In \emph{Proceedings of the 2018 Conference on Empirical Methods in
+  Natural Language Processing}.
+
+\bibitem[{Yu et~al.(2023)Yu, Zhang, Pan, Ma, Wang, and Yu}]{yu2023chainofnote}
+Wenhao Yu, Hongming Zhang, Xiaoman Pan, Kaixin Ma, Hongwei Wang, and Dong Yu.
+  2023.
+\newblock {Chain-of-Note}: Enhancing robustness in retrieval-augmented language
+  models.
+\newblock \emph{arXiv preprint arXiv:2311.09210}.
+
+\bibitem[{Zhou et~al.(2026)Zhou, Wang, Koopman, and Zuccon}]{zhou2026explicit}
+Yongjie Zhou, Shuai Wang, Bevan Koopman, and Guido Zuccon. 2026.
+\newblock Do conversational agents need explicit memory? {A} controlled
+  comparison with raw-history retrieval.
+\newblock \emph{arXiv preprint arXiv:2610.24671}.
+
+\bibitem[{Zhuang et~al.(2024)Zhuang, Qin, Hui, Wu, Yan, Wang, and
+  Bendersky}]{zhuang2024beyond}
+Honglei Zhuang, Zhen Qin, Kai Hui, Junru Wu, Le~Yan, Xuanhui Wang, and Michael
+  Bendersky. 2024.
+\newblock Beyond yes and no: Improving zero-shot {LLM} rankers via scoring
+  fine-grained relevance labels.
+\newblock In \emph{Proceedings of the 2024 Conference of the North American
+  Chapter of the Association for Computational Linguistics}.
+
+\end{thebibliography}

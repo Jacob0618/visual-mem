@@ -1,0 +1,36 @@
+\section{Visibility-Gated Set Reading}
+\label{sec:method}
+
+\vgs{} separates locating evidence from reading its full content. Global evidence navigation selects rounds using an index of the history, while visibility-guided reading decides when to widen access and how to present the evidence to the reader (Figure~\ref{fig:overview}). The selector prompt, base index format, and gate threshold are shared across benchmarks. No component is trained.
+
+\subsection{Global Evidence Navigation}
+\label{sec:index}
+
+\paragraph{Memory index.} To make the history available for selection, we store each raw round and its images alongside a short index line. Lines are grouped under one header per session, which gives the session's label and date, and each line names its round by its position in the history. A line keeps the first 200 characters of the user message after removing function words and adds a one-sentence description of each image (up to 220 characters). Assistant replies are not indexed, because they mostly restate the user's content. Image descriptions are generated once from the images alone. The index gives the selector a compact view of the whole history, while the raw store preserves details that the lines omit.
+
+\paragraph{Evidence selection.}
+\label{sec:select}
+Given the index and question, the selector returns the identifiers of the rounds to open and chooses how many are needed, up to $N{=}40$. Its prompt asks for all potential evidence, including members of a referenced group, rounds that define the question's labels, and images whose short descriptions leave their relevance uncertain (Appendix~\ref{app:prompts}). Reading the entries together gives the selector context for resolving references across rounds. We call this operation query-time set selection (\qss{}).
+
+For histories beyond the selector's context limit, a cosine prefilter can restrict navigation to $P$ candidate rounds. The main benchmarks fit without this restriction. Section~\ref{sec:res-ablation} examines the effect of limiting access to the history.
+
+\subsection{Visibility-Guided Reading}
+\label{sec:gate}
+
+\paragraph{Visibility gate.} Navigation depends on the information that the index retains. We therefore measure \emph{index visibility}, the share of a history's content that its index lines still show. Let $W(x)$ be the content words of text $x$, $\ell(r)$ the index line of round $r$, and $\bar r$ its full dialogue text and image descriptions. For a history $h$,
+\begin{equation}
+H(h)=\frac{1}{|h|}\sum_{r\in h}\frac{|W(\ell(r))\cap W(\bar r)|}{|W(\bar r)|}.
+\label{eq:vis}
+\end{equation}
+We lowercase words and remove stopwords and single-character tokens. $H(h)$ is computed when the index is written, without a question or a model call, and is updated as rounds arrive. The gate sends a history to the standard path when $H(h)\ge\tau$ and to the widened path otherwise, with $\tau{=}0.45$ for all benchmarks and readers. This value separates histories with long messages, whose index lines are truncated (visibility up to 0.35), from histories with short messages (0.55 and above); any threshold in between gives the same routing. A per-question variant of the estimate is analysed in Section~\ref{sec:res-vis}.
+
+\paragraph{Reading the selected evidence.}
+\label{sec:read}
+On the standard path, the reader receives the rounds selected by \qss{} with their original images in chronological order. For persistent histories, the strong reader also receives the cached index to supply context beyond the opened rounds.
+
+On the widened path, we adapt evidence access to the reader (Appendix~\ref{app:vis} compares the two designs). For the lightweight reader, the selector uses \qss{} with 600-character user snippets to see more of each message. A lightweight note writer then extracts question-relevant facts from each selected round and its images, preserving exact values and round identifiers. The final reader receives these notes followed by the selected raw rounds. The strong reader instead receives the selected rounds together with the 40 rounds most similar to the question, so widening adds evidence without removing any that navigation found. This path relies on the strong reader's ability to process a broader context directly.
+
+\subsection{Caching}
+\label{sec:cache}
+
+For persistent histories, \vgs{} caches the index for each user and history version, and selection calls send only the question against the cached prefix. Measured costs include cache creation and storage. Compressing the lines halves the index without changing what the selector can find: on VisualMem, the index shrinks from 99k to 44k tokens while full-set recall stays at 0.79 (Appendix~\ref{app:cost}).

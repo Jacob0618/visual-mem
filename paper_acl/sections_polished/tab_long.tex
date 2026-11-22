@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{\linewidth}{lYYYY}
+\toprule
+\rowcolor{hHead} & \multicolumn{2}{c}{\textbf{Light}} & \multicolumn{2}{c}{\textbf{Strong}} \\
+\rowcolor{hHead} \textbf{Rounds} & RAG@40 & \vgs{} & RAG@40 & \vgs{} \\
+\midrule
+126 & .493 & \textbf{.543} & .764 & \textbf{.793} \\
+1,171 & .488 & \textbf{.513} & .705 & \textbf{.771} \\
+4,088 & .482 & \textbf{.512} & .747 & \textbf{.795} \\
+\bottomrule
+\end{tabularx}
+\caption{\textbf{Longer histories.} MemEye histories enlarged with image chats of other users (mean rounds per history); the 371 questions and their evidence are unchanged. \vgs{} reads the whole index on its standard path.}
+\label{tab:long}
+\end{table}

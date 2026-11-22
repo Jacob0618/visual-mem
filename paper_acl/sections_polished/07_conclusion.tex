@@ -1,0 +1,4 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+Simple RAG is a strong starting point for agent memory, but finding evidence remains difficult when answers depend on images or several past items together. We introduced \vgs{} to couple global evidence navigation with visibility-guided reading. It uses a compact index to locate relevant rounds and adapts access to how much of a history that index retains and to the reader's capacity. Across four multimodal benchmarks, this design improves a lightweight reader throughout. With a strong reader, it helps on long histories, where most image evidence lies outside the retrieved rounds, and matches retrieval on shorter ones. The findings support raw multimodal memory with evidence access adapted to the history and the reader.

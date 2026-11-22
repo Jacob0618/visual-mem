@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.2pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{llccc}
+\toprule
+\rowcolor{hHead} Reader & Widened path & MemEye & MemLens & VisualMem \\
+\midrule
+\multirow{2}{*}{Light} & notes + selected rounds & .476 & \textbf{.513} & \textbf{.579} \\
+ & selected $\cup$ top-40 rounds & \textbf{.493} & .470 & .519 \\
+\midrule
+\multirow{2}{*}{Strong} & selected $\cup$ top-40 rounds & \textbf{.819} & \textbf{.693} & \textbf{.921} \\
+ & notes + selected rounds & .754 & .667 & .862 \\
+\bottomrule
+\end{tabular}}
+\caption{\textbf{Swapping the widened paths.} Accuracy when each reader uses its own widened path (first row of each block) or the other reader's, applied to every question.}
+\label{tab:swap}
+\end{table}

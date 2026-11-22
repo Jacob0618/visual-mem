@@ -1,0 +1,21 @@
+\begin{table*}[t]
+\centering
+\small
+\begin{tabular}{l|ccc|cc}
+\toprule
+\rowcolor{hHead} & \multicolumn{3}{c|}{\textbf{Lightweight reader}} & \multicolumn{2}{c}{\textbf{Strong reader}} \\
+\rowcolor{hHead} \textbf{Policy} & MemEye & MemLens & VisualMem & MemEye & MemLens \\
+\midrule
+Standard path for every question & 0.518 & 0.483 & 0.575 & 0.803 & 0.618 \\
+Widened path for every question & 0.506 & 0.536 & 0.592 & 0.749 & 0.689 \\
+Gate on message length & 0.501 & 0.530 & 0.593 & 0.800 & 0.687 \\
+Random routing, same share & 0.517 & 0.530 & 0.585 & 0.802 & 0.680 \\
+\oursrow \vgs{} gate ($\hat v(q)\ge0.7$) & 0.519 & 0.536 & 0.601 & 0.797 & 0.687 \\
+\midrule
+Per-question oracle & 0.612 & 0.597 & 0.655 & 0.842 & 0.734 \\
+AUC of $\hat v(q)$ & 0.46 & 0.55 & 0.61 & -- & -- \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Routing policies.} Each cell is the accuracy when every question takes the given path or when a rule routes it; the widened path of the strong reader is top-40 retrieval. The message-length gate widens a question when the user messages of its ten most similar rounds average at least 165 characters, a threshold chosen on MemEye and the remaining MemLens questions as for $\tau$. AUC: how well $-\hat v(q)$ ranks the questions on which the widened path scores higher than the standard path above those on which it scores lower. MemEye and VisualMem with the lightweight reader use the run of Table~\ref{tab:ablation}.}
+\label{tab:gate}
+\end{table*}

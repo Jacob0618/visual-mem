@@ -1,0 +1,34 @@
+\section{Visibility-Gated Set Reading}
+\label{sec:method}
+
+\vgs{} answers a question in three steps (Figure~\ref{fig:overview}): it estimates whether the index exposes the evidence, selects the evidence set by reading the index, and reads the selected rounds in the form that the reader needs. Prompts, thresholds, and index format are the same for every benchmark and reader, and nothing is trained.
+
+\subsection{A Navigation Layer over Raw Memory}
+\label{sec:index}
+
+At ingestion, the memory keeps every round raw and writes one index line per round that contains the round and session identifiers, the date, the first 200 characters of the user message, a one-sentence description of each image written once from the image alone, and the first 100 characters of the assistant reply. The index serves navigation only; the reader always receives the original rounds. Only when the index exceeds the context of the selector does a cosine prefilter show the lines of the $P$ most similar rounds; all three benchmarks fit, and Section~\ref{sec:res-ablation} shows why the whole index is preferable.
+
+\subsection{Query-Time Set Selection}
+\label{sec:select}
+
+Given the index and the question, a selector model returns a list of round identifiers that is capped at $N{=}40$ but is otherwise free in size. Its instruction asks for every round that may hold evidence, in particular for all members of any group that the question refers to, for the rounds that define the labels used in the question, and for the rounds whose image description is too coarse to rule them out (Appendix~\ref{app:prompts}). Reading the whole index lets the selector resolve an alias through the place of an item in the history, and returning a set lets the budget follow the number of members. We call this step query-time set selection (\qss{}).
+
+\subsection{Index Visibility and the Gate}
+\label{sec:gate}
+
+\qss{} can reach only the evidence that the index exposes. Let $W(x)$ denote the content words of a text $x$, $\ell(r)$ the index line of round $r$, and $\bar r$ the full text of $r$ together with its image descriptions. The index visibility of a question is the share of the question words found in its evidence that the index lines still show,
+\begin{equation}
+V(q)=\frac{1}{|G^{+}|}\sum_{r\in G^{+}}\frac{|W(q)\cap W(\ell(r))|}{|W(q)\cap W(\bar r)|},
+\label{eq:vis}
+\end{equation}
+where $G^{+}\subseteq G(q)$ contains the gold rounds that share at least one content word with $q$. At question time, \vgs{} computes the same quantity on the ten rounds most similar to the question, an estimate $\hat v(q)$ that needs no annotation. A question takes the standard path if $\hat v(q)\ge\tau$ and the widened path otherwise; we set $\tau{=}0.7$ and keep it fixed for all benchmarks and readers.
+
+\subsection{Reader-Aware Reading}
+\label{sec:read}
+
+On the standard path, the reader receives the selected rounds with their original images in chronological order, and a strong reader also receives the index itself when the index is cached (Section~\ref{sec:cache}). The widened path addresses the two failures that low visibility produces. First, the index lines keep 600 instead of 200 characters of the user message, so that an aside inside a long message becomes visible to the selector. Second, the reading adapts to the reader. Lightweight readers fail to aggregate a set even when it is complete (Section~\ref{sec:res-ablation}), so a lightweight model reads each selected round with its images and writes down the facts that the round contributes to the question, each with its exact values and round identifier, and the reader receives these notes before the raw rounds; aggregating the set thereby becomes reading a short list. Strong readers aggregate long inputs well but benefit from breadth, so their widened path reads the 40 rounds most similar to the question.
+
+\subsection{A Cache-Native Index}
+\label{sec:cache}
+
+The selection call reads the whole index for every question, but the index of a persistent memory changes only by appending, so \vgs{} stores it once per user and history version in an explicit context cache and sends only the question with each call; cached input tokens cost a tenth of regular ones, plus a creation and storage charge. A compact index halves the remaining tokens with three deterministic rules: no assistant snippet, short round identifiers under session headers, and no function words in the user snippet (Appendix~\ref{app:compact}).

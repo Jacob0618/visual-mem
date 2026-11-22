@@ -1,0 +1,35 @@
+\begin{table*}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{2.4pt}
+\begin{tabular}[t]{l|cc|cc}
+\toprule
+\rowcolor{hHead} & \multicolumn{2}{c|}{\textbf{Token F1}} & \multicolumn{2}{c}{\textbf{BLEU-1}} \\
+\rowcolor{hHead} \textbf{Method} & MemEye & MemLens & MemEye & MemLens \\
+\midrule
+RAG@40 & .304 / .508 & .467 / .639 & .259 / \textbf{.448} & .454 / .616 \\
+SimpleMem & .250 / .329 & .346 / .375 & .211 / .290 & .335 / .362 \\
+Omni-SimpleMem & .187 / .236 & .378 / .397 & .149 / .201 & .368 / .381 \\
+MIRIX & .174 / .202 & .231 / .184 & .142 / .179 & .226 / .180 \\
+V-Mem & .294 / .442 & .435 / .561 & .249 / .391 & .420 / .539 \\
+MMA & .260 / .380 & .447 / .492 & .214 / .330 & .433 / .466 \\
+TeleMem & .246 / .290 & .295 / .157 & .207 / .255 & .285 / .152 \\
+\midrule
+\oursrow \vgs{} (ours) & \textbf{.351} / \textbf{.511} & \textbf{.496} / \textbf{.662} & \textbf{.301} / .447 & \textbf{.480} / \textbf{.638} \\
+\bottomrule
+\end{tabular}\hfill
+\begin{tabular}[t]{l|ccc|ccc}
+\toprule
+\rowcolor{hHead} & \multicolumn{3}{c|}{\textbf{Recall@10}} & \multicolumn{3}{c}{\textbf{nDCG@10}} \\
+\rowcolor{hHead} \textbf{Method} & ME & ML & VM & ME & ML & VM \\
+\midrule
+RAG@40 & .774 & .579 & .299 & .667 & .537 & .226 \\
+V-Mem & .621 & .583 & .272 & .409 & .452 & .202 \\
+MMA & .697 & \textbf{.786} & .355 & .550 & \textbf{.808} & .246 \\
+\midrule
+\oursrow \vgs{} (ours) & \textbf{.903} & .626 & \textbf{.753} & \textbf{.829} & .723 & \textbf{.656} \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Standard metrics.} On the question sets of Table~\ref{tab:main}. Left: token F1 and BLEU-1 of the answers (lightweight / strong reader) on the open-ended benchmarks; VisualMem is multiple choice, so its answer metric is the exact match of Table~\ref{tab:main}. Right: Recall@10 and nDCG@10 of the rounds that a method hands to the reader, in its own order, against the gold rounds (\vgs{}: its lightweight-reader path). They apply to the methods that return raw rounds; the other memory systems return rewritten records. Latency is in Table~\ref{tab:latency}.}
+\label{tab:std}
+\end{table*}

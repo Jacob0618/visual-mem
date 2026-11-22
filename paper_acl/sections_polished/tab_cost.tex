@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcccc}
+\toprule
+\rowcolor{hHead} \textbf{Method} & MemEye & MemLens & VisualMem & CamRoll \\
+\midrule
+RAG@40 & 0.9\,/\,9.7 & 1.7\,/\,14.0 & 1.0\,/\,8.8 & 1.3\,/\,11.4 \\
+\quad + LLM rerank & 6.0\,/\,15.7 & 6.4\,/\,22.0 & 8.9\,/\,17.7 & 9.1\,/\,19.2 \\
+Full context & 0.4\,/\,21.9 & 3.1\,/\,24.9 & 3.2\,/\,154 & --\,/\,-- \\
+\midrule
+SimpleMem & 12.5\,/\,15.6 & 46.8\,/\,49.0 & 21.8\,/\,26.2 & 23.4\,/\,27.7 \\
+Omni-SimpleMem & 2.2\,/\,3.9 & 48.3\,/\,50.4 & 10.5\,/\,13.2 & 15.6\,/\,18.2 \\
+TeleMem & 0.7\,/\,2.1 & 30.6\,/\,32.2 & 4.3\,/\,6.3 & 2.0\,/\,4.1 \\
+\midrule
+V-Mem & 1.0\,/\,9.5 & 1.9\,/\,16.1 & 1.4\,/\,11.0 & 1.3\,/\,11.9 \\
+MMA & 2.2\,/\,16.7 & 3.6\,/\,18.8 & 3.0\,/\,22.9 & 5.6\,/\,24.4 \\
+\midrule
+\oursrow \textbf{\vgs{} (ours)} & 1.6\,/\,5.5 & 4.6\,/\,13.8 & 6.6\,/\,23.1 & 5.7\,/\,15.7 \\
+\bottomrule
+\end{tabular}}
+\caption{\textbf{Cost.} USD per 1,000 questions with the lightweight\,/\,strong reader, including memory construction and caches.}
+\label{tab:cost}
+\end{table}

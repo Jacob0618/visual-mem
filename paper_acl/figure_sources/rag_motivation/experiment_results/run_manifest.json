@@ -1,0 +1,42 @@
+{
+  "started_at": 1794412342.447624,
+  "runner": "scripts/p14_read_ids.py",
+  "reader": "strong",
+  "k": 30,
+  "benchmarks": {
+    "memeye": {
+      "source_rag40": "results/mm2/memeye_all/rag-40__read-low__gemini-3.8-flash.jsonl",
+      "source_sha256": "5a1b78fb8ff1715747cc349e6c3498a764d70c9c3ba1e08d8a1640bc3af26688",
+      "subset": null,
+      "n": 371,
+      "ids_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memeye_ids30.json",
+      "out": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memeye_rag30_strong.jsonl",
+      "previous_rag40_answering_usd": 3.627445650000001
+    },
+    "memlens": {
+      "source_rag40": "results/mm2/memlens_32k_memlens_test/rag-40__read-low__gemini-3.8-flash.jsonl",
+      "source_sha256": "6811b15bcf3768169289035176e6492a4b38092ad297cf243731819302c46ba8",
+      "subset": "results/p11_memlens_sub150.json",
+      "n": 150,
+      "ids_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memlens_ids30.json",
+      "out": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/memlens_rag30_strong.jsonl",
+      "previous_rag40_answering_usd": 2.2277992499999995
+    },
+    "visualmem": {
+      "source_rag40": "results/mm2/visualmem_all/rag-40__read-low__gemini-3.8-flash.jsonl",
+      "source_sha256": "11c155c186da0d0ca727c2a02dffb5a5c288f8f5a588ef129d81211652945592",
+      "subset": null,
+      "n": 696,
+      "ids_file": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/visualmem_ids30.json",
+      "out": "/Users/qixuansun/Desktop/visual mem/results/rag30_20261111/visualmem_rag30_strong.jsonl",
+      "previous_rag40_answering_usd": 6.11739075
+    }
+  },
+  "code_sha256": {
+    "scripts/p14_read_ids.py": "e22850b5c0711192e32938a23ed64c4ad0fa58feda054bb67aad82f0206a3d4c",
+    "scripts/run_mm2.py": "90e6c60b360ad2376714a09ce654dac6500028485fa22567b2c9783f24bb8143",
+    "src/mm.py": "84877f0df0239618c4a0fbe60b49ae7727468d3ffe2ddaa1a983effd43e73cf1",
+    "src/mm2.py": "ba746063e71418e618889cb665c14047c3cb5fa9410b55f76e9d894d1e39e5f7",
+    "src/gem.py": "db61e500040d4f90bd9515d5dbd94a91167eefabe7c01c0db1f347bf87b8d9f2"
+  }
+}

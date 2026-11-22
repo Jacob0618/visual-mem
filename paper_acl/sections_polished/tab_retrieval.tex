@@ -1,0 +1,22 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l|cc|cc|cc|cc}
+\toprule
+\multirow{2}{*}{\textbf{Retrieval}} & \multicolumn{2}{c|}{\cellcolor{hME}\textbf{MemEye}} & \multicolumn{2}{c|}{\cellcolor{hML}\textbf{MemLens}} & \multicolumn{2}{c|}{\cellcolor{hVM}\textbf{VisualMem}} & \multicolumn{2}{c}{\cellcolor{hCR}\textbf{CamRoll}} \\
+ & \cellcolor{hME}Light & \cellcolor{hME}Strong & \cellcolor{hML}Light & \cellcolor{hML}Strong & \cellcolor{hVM}Light & \cellcolor{hVM}Strong & \cellcolor{hCR}Light & \cellcolor{hCR}Strong \\
+\midrule
+Dense top-10 & .449 & .670 & .442 & .543 & .405 & .750 & .754 & .853 \\
+Dense top-20 & .475 & .723 & .485 & .624 & .438 & .795 & .749 & .884 \\
+Dense top-30 & .479 & .750 & .459 & .652 & .438 & .806 & .730 & .890 \\
+Dense top-40 (RAG@40) & .493 & .764 & .470 & .682 & .450 & .826 & .724 & .894 \\
+BM25 + dense (RRF), top-40 & .463 & .770 & .459 & .700 & .457 & .836 & .702 & .891 \\
+Dense top-100 $\rightarrow$ LLM rerank, top-40 & .474 & .790 & .446 & .674 & .499 & .861 & .734 & .901 \\
+\midrule
+\oursrow \vgs{} & .543 & .793 & .513 & .693 & .579 & .921 & .827 & .899 \\
+\bottomrule
+\end{tabular}
+\caption{\textbf{Retrieval baselines.} Accuracy with the lightweight and the strong reader. The reranker is the selector model with the selector instruction, applied to the 100 most similar rounds.}
+\label{tab:retrieval}
+\end{table*}
