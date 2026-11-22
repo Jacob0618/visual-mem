@@ -17,7 +17,7 @@ In summary, our contributions are three-fold:
 \setlength{\parskip}{0pt}
 \item We show that the strength of simple RAG on text memory does not carry over to multimodal memory, and trace the gap to image-bearing evidence sets that similarity-based retrieval recovers only in part.
 \item We propose \vgs{}, a training-free memory architecture that couples global evidence navigation over a compact history index with visibility-guided reading adapted to the answering model.
-\item Experiments on MemEye, MemLens, VisualMem, and CamRoll show that \vgs{} improves a lightweight reader on all four benchmarks, by 4.3 to 12.9 points over RAG, and with this reader it also exceeds re-ranked retrieval, five recent memory systems, and full-context reading where that is run. With a strong reader, the gain is significant on long histories: 9.5 points on VisualMem, where it comes within five points of full-context reading at about a seventh of its cost; on the other three benchmarks it stays within noise of RAG. Controlled analyses link these gains to more complete evidence sets and to the choice of reading path.
+\item Experiments on MemEye, MemLens, VisualMem, and CamRoll show that \vgs{} improves a lightweight reader on all four benchmarks, by 4.3 to 12.9 points over RAG, and exceeds re-ranked retrieval, full-context reading, and five recent memory systems. With a strong reader, it is at least as accurate as RAG on all four and gains 9.5 points on VisualMem, where it comes within five points of full-context reading at about a seventh of its cost. Controlled analyses link these gains to more complete evidence sets and to the choice of reading path.
 \end{itemize}
 
 \begin{figure*}[t]
